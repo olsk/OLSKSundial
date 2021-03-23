@@ -4,7 +4,7 @@ export let OLSKSundialBaseSize = 10;
 export let OLSKSundialLineCount = 1;
 export let OLSKSundialLineSize = 10;
 
-const lineOrigin = OLSKSundialSize / 2 + OLSKSundialBaseSize / 2 + 2.5;
+const lineOrigin = OLSKSundialSize / 2 + OLSKSundialBaseSize * 0.725;
 </script>
 
 <svg class="OLSKSundial" width={ OLSKSundialSize } height={ OLSKSundialSize }>
