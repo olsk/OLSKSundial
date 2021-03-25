@@ -46,11 +46,11 @@ describe('OLSKSundial_Misc', function () {
 	describe('OLSKSundialLine', function test_OLSKSundialLine () {
 
 		it('sets x1', function () {
-			browser.assert.attribute(OLSKSundialLine, 'x1', item.OLSKSundialSize / 2 + item.OLSKSundialBaseSize / 2 + 2.5);
+			browser.assert.attribute(OLSKSundialLine, 'x1', item.OLSKSundialSize / 2 + item.OLSKSundialBaseSize * 0.725);
 		});
 
 		it('sets y1', function () {
-			browser.assert.attribute(OLSKSundialLine, 'y1', item.OLSKSundialSize / 2 + item.OLSKSundialBaseSize / 2 + 2.5);
+			browser.assert.attribute(OLSKSundialLine, 'y1', item.OLSKSundialSize / 2 + item.OLSKSundialBaseSize * 0.725);
 		});
 
 	});
