@@ -10,26 +10,32 @@ Object.entries({
 	return global[e.shift()]  = e.pop();
 });
 
-describe('OLSKSundial_Access', function () {
+const OLSKSundialLineCount = Math.max(1, Date.now() % 10);
 
-	const OLSKSundialLineCount = Math.max(1, Date.now() % 10);
+[true, undefined].forEach(function (TestServerRender) {
 
-	before(function() {
-		return browser.OLSKVisit(kDefaultRoute, {
-			OLSKSundialLineCount,
+	describe('OLSKSundial_Access-' + (TestServerRender ? 'Server' : 'Client') , function () {
+
+		before(function() {
+			return browser.OLSKVisit(kDefaultRoute, Object.assign({
+				OLSKSundialLineCount,
+			}, TestServerRender ? {
+				TestServerRender,
+			} : {}));
 		});
-	});
 
-	it('shows OLSKSundial', function () {
-		browser.assert.elements(OLSKSundial, 1);
-	});
+		it('shows OLSKSundial', function () {
+			browser.assert.elements(OLSKSundial, 1);
+		});
 
-	it('shows OLSKSundialCircle', function () {
-		browser.assert.elements(OLSKSundialCircle, 1);
-	});
+		it('shows OLSKSundialCircle', function () {
+			browser.assert.elements(OLSKSundialCircle, 1);
+		});
 
-	it('shows OLSKSundialLine', function () {
-		browser.assert.elements(OLSKSundialLine, OLSKSundialLineCount);
-	});
+		it('shows OLSKSundialLine', function () {
+			browser.assert.elements(OLSKSundialLine, OLSKSundialLineCount);
+		});
 
+	});
+	
 });

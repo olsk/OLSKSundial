@@ -17,16 +17,4 @@ const lineOrigin = OLSKSundialSize / 2 + OLSKSundialBaseSize * 0.725;
 
 </svg>
 
-<style>
-:global(:root) {
-  --OLSKSundialStrokeColor: black;
-  --OLSKSundialStrokeWidth: 2;
-}
-
-.OLSKSundialCircle, .OLSKSundialLine {
-  stroke: var(--OLSKSundialStrokeColor);
-  stroke-width: var(--OLSKSundialStrokeWidth);
-  stroke-linecap: round;
-  transform-origin: center;
-}
-</style>
+<style src="./ui-style.css"></style>

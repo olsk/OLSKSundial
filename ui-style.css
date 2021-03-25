@@ -1,0 +1,11 @@
+:global(:root) {
+  --OLSKSundialStrokeColor: black;
+  --OLSKSundialStrokeWidth: 2;
+}
+
+.OLSKSundialCircle, .OLSKSundialLine {
+  stroke: var(--OLSKSundialStrokeColor);
+  stroke-width: var(--OLSKSundialStrokeWidth);
+  stroke-linecap: round;
+  transform-origin: center;
+}

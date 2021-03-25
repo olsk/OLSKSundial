@@ -1,0 +1,22 @@
+<%
+const params = Object.assign({
+	OLSKSundialSize: 100,
+	OLSKSundialBaseSize: 10,
+	OLSKSundialLineCount: 1,
+	OLSKSundialLineSize: 10,
+}, locals);
+const lineOrigin = params.OLSKSundialSize / 2 + params.OLSKSundialBaseSize * 0.725;
+%>
+<svg class="OLSKSundial" width="<%= params.OLSKSundialSize %>" height="<%= params.OLSKSundialSize %>">
+
+<circle class="OLSKSundialCircle" fill="transparent" r="<%= params.OLSKSundialBaseSize %>" cx="<%= params.OLSKSundialSize / 2 %>" cy="<%= params.OLSKSundialSize / 2 %>" />
+
+<% Array.from(Array(params.OLSKSundialLineCount)).forEach(function (item, index) { -%>
+	<line class="OLSKSundialLine" x1="<%= lineOrigin %>" y1="<%= lineOrigin %>" x2="<%= lineOrigin + params.OLSKSundialLineSize %>" y2="<%= lineOrigin + params.OLSKSundialLineSize %>" style="transform: rotateZ(<%= -45 -90 + (360 / params.OLSKSundialLineCount * index) %>deg);" />	
+<% }); -%>
+
+</svg>
+
+<style>
+<%- include('./ui-style.css').replace(':global(:root)', ':root') %>
+</style>

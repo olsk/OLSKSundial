@@ -4,4 +4,8 @@ locals.OLSKPageAssets = [
 ];
 %>
 
-<script src="/<%= OLSKSharedPageControllerSlug %>/__compiled/ui-behaviour.js"></script>
+<% if (locals.TestServerRender) { -%>
+	<%- include('./main.ejs') %>	
+<% } else { -%>
+	<script src="/<%= OLSKSharedPageControllerSlug %>/__compiled/ui-behaviour.js"></script>
+<% } -%>
