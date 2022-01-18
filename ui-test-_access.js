@@ -7,7 +7,7 @@ Object.entries({
 
 	OLSKSundialLine: '.OLSKSundialLine',
 }).map(function (e) {
-	return global[e.shift()]  = e.pop();
+	return global[e.shift()] = e.pop();
 });
 
 const OLSKSundialLineCount = Math.max(1, Date.now() % 10);
