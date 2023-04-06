@@ -25,15 +25,15 @@ const OLSKSundialLineCount = Math.max(1, Date.now() % 10);
 		});
 
 		it('shows OLSKSundial', function () {
-			browser.assert.elements(OLSKSundial, 1);
+			return browser.assert.elements(OLSKSundial, 1);
 		});
 
 		it('shows OLSKSundialCircle', function () {
-			browser.assert.elements(OLSKSundialCircle, 1);
+			return browser.assert.elements(OLSKSundialCircle, 1);
 		});
 
 		it('shows OLSKSundialLine', function () {
-			browser.assert.elements(OLSKSundialLine, OLSKSundialLineCount);
+			return browser.assert.elements(OLSKSundialLine, OLSKSundialLineCount);
 		});
 
 	});

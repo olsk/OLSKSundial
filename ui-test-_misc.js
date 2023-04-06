@@ -18,11 +18,11 @@ const item = {
 		describe('OLSKSundial', function test_OLSKSundial () {
 
 			it('sets width', function () {
-				browser.assert.attribute(OLSKSundial, 'width', item.OLSKSundialSize);
+				return browser.assert.attribute(OLSKSundial, 'width', item.OLSKSundialSize);
 			});
 
 			it('sets height', function () {
-				browser.assert.attribute(OLSKSundial, 'height', item.OLSKSundialSize);
+				return browser.assert.attribute(OLSKSundial, 'height', item.OLSKSundialSize);
 			});
 
 		});
@@ -30,19 +30,19 @@ const item = {
 		describe('OLSKSundialCircle', function test_OLSKSundialCircle () {
 
 			it('sets fill', function () {
-				browser.assert.attribute(OLSKSundialCircle, 'fill', 'transparent');
+				return browser.assert.attribute(OLSKSundialCircle, 'fill', 'transparent');
 			});
 
 			it('sets r', function () {
-				browser.assert.attribute(OLSKSundialCircle, 'r', item.OLSKSundialBaseSize);
+				return browser.assert.attribute(OLSKSundialCircle, 'r', item.OLSKSundialBaseSize);
 			});
 
 			it('sets cx', function () {
-				browser.assert.attribute(OLSKSundialCircle, 'cx', item.OLSKSundialSize / 2);
+				return browser.assert.attribute(OLSKSundialCircle, 'cx', item.OLSKSundialSize / 2);
 			});
 
 			it('sets cy', function () {
-				browser.assert.attribute(OLSKSundialCircle, 'cy', item.OLSKSundialSize / 2);
+				return browser.assert.attribute(OLSKSundialCircle, 'cy', item.OLSKSundialSize / 2);
 			});
 
 		});
@@ -50,11 +50,11 @@ const item = {
 		describe('OLSKSundialLine', function test_OLSKSundialLine () {
 
 			it('sets x1', function () {
-				browser.assert.attribute(OLSKSundialLine, 'x1', item.OLSKSundialSize / 2 + item.OLSKSundialBaseSize * 0.725);
+				return browser.assert.attribute(OLSKSundialLine, 'x1', item.OLSKSundialSize / 2 + item.OLSKSundialBaseSize * 0.725);
 			});
 
 			it('sets y1', function () {
-				browser.assert.attribute(OLSKSundialLine, 'y1', item.OLSKSundialSize / 2 + item.OLSKSundialBaseSize * 0.725);
+				return browser.assert.attribute(OLSKSundialLine, 'y1', item.OLSKSundialSize / 2 + item.OLSKSundialBaseSize * 0.725);
 			});
 
 		});
